@@ -9,7 +9,12 @@ class SamplesController < ApplicationController
   def create
     @sample = Sample.new(sample_params)
     @sample.save
-    redirect_to root_path
+    redirect_to sample_path(@sample.id)
+  end
+
+  def show
+    @sample = Sample.find(params[:id])
+    @samples = Sample.new
   end
 
   private

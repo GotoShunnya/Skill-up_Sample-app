@@ -3,7 +3,7 @@
     <div class="col-md-3">
 
       <h1>投稿フォーム</h1>
-        <%= form_with model: @sample, local: true do |f| %>
+        <%= form_with model: @samples, local: true do |f| %>
       <h4>Title</h4>
         <%= f.text_field :title %>
       <h4>body</h4>
@@ -20,15 +20,15 @@
       <th>Opinion</th>
     </tr>
   </thead>
-  <% @samples.each do |sample| %>
   <thead>
     <tr>
-      <td>title:<%=link_to sample.title, sample_path(sample.id) %></td>
-      <td>body:<%=sample.body %></td>
+      <td><%=@sample.title %></td>
+      <td><%=@sample.body %></td>
     </tr>
   </thead>
-  <% end %>
 </table>
+      <%= link_to "一覧へ", samples_path, class:"btn btn-success" %>
     </div>
   </div>
 </div>
+
