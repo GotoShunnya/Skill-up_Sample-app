@@ -1,4 +1,8 @@
 class SamplesController < ApplicationController
+
+  def top
+  end
+
   def index
     @sample = Sample.new
     @samples = Sample.all

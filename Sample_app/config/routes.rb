@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root "samples#index"
+  root "samples#top"
   resources :samples, only: [:index, :create, :show]
 end
